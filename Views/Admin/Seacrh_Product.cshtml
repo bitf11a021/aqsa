@@ -1,0 +1,57 @@
+﻿@model Online_Jewellery_Storee.Models.product1
+@{
+    ViewBag.Title = "Seacrh_Product"; 
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			
+			<li id="user_info">	Welcome(&nbsp; <a class="login" href="/Account/Login">Log Out</a>&nbsp;)</li>
+    </ul>    }
+
+
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+		<div id="topmenu">
+			<ul class="sf-menu clearfix">
+                	<ul class="sf-menu clearfix">
+                <li><a href="/Admin/">Home</a>
+				</li>
+                <li><a href="/Admin/ViewAll">View All</a>
+				</li>
+				<li><a href="/Admin/Add">Add Product</a>
+				</li>
+                <li><a href="/Admin/Delete">Delete Product</a>
+				</li>
+                <li><a href="/Admin/Update">Update Product</a>
+				</li>
+                <li><a href="/Admin/Gallery">Gallery</a></li>
+                
+
+			</ul>
+
+			</ul>
+		</div>
+			</ul>
+		</div>
+    }
+<h2>Seacrh_Product</h2>
+@using (Html.BeginForm("Search","Admin"))
+{
+    @Html.LabelFor(model=>model.Category)
+     <td><select name="Category" id="Category">
+                   <option ></option>
+                   <option id="op1">ring</option>
+                   <option id="op2">Necklace</option>
+         
+                   <option id="op3">bracelete</option>
+                  
+              </select>
+         <input type="submit" value="search" />
+         </td>
+
+}

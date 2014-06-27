@@ -1,0 +1,70 @@
+﻿@model Online_Jewellery_Storee.Models.product1
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			
+			<li id="user_info">	Welcome(&nbsp; <a class="login" href="/Account/Login">Log Out</a>&nbsp;)</li>
+    </ul>    }
+
+
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				 
+			<ul class="sf-menu clearfix">
+                <li><a href="/Admin/">Home</a>
+				</li>
+                <li><a href="/Admin/ViewAll">View All</a>
+				</li>
+				<li><a href="/Admin/Add">Add Product</a>
+				</li>
+                <li><a href="/Admin/Delete_Prod">Delete Product</a>
+				</li>
+                <li><a href="/Admin/Update_Prod">Update Product</a>
+				</li>
+                <li><a href="/Admin/Gallery">Gallery</a></li>
+                
+
+			</ul>
+			</ul>
+		</div>
+
+			
+    }
+<form action="/Admin/Update_Product" method="post">
+<div id="content" class="float_r">
+        	
+            
+            <div class="content_half float_l checkout">
+		<img src="~/Uploads/images/@ViewBag.X.imagee" alt="" width="20%" height="20%"/><br />
+                <br />
+             	 Product ID :  
+                  <input type="text"  name="id" value="@ViewBag.X.PId" style="width:300px;" readonly="true"  />
+                <br />
+                <br />
+                Product Name :  
+                  <input type="text"  name="productname" value="@ViewBag.X.Name" style="width:300px;"  />
+                <br />
+                <br />
+              Product price:
+                <input type="text"  name="price" value="@ViewBag.X.Amount" style="width:300px;"  />
+                <br />
+                <br />
+
+                Product Qyantity:
+                <input type="text"  name="quantity" value="@ViewBag.X.Qunatity" style="width:300px;"  />
+                <br />
+                <br />
+              
+           <button><input type="submit" class="submit_btn" name="submit" id="submit" value="Update" /></button>
+                       
+                 
+
+            </div>
+       </form>

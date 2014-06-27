@@ -1,0 +1,16 @@
+﻿@model Online_Jewellery_Storee.Models.product1
+
+@{
+    ViewBag.Title = "SearchName";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+ @foreach( var product in ViewBag.x)
+        {
+       <p class="border"><img src="~/Uploads/images/@product.imagee" alt="" width="20%" height="20%" /></p>
+        
+		<h4> @product.Name</h4>
+		<p>@product.Amount</p>
+        
+       <p>@product.Qunatity</p>
+   }

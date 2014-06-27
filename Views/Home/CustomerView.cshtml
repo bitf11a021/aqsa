@@ -1,0 +1,54 @@
+﻿@model Online_Jewellery_Storee.Models.product1
+
+@{
+    ViewBag.Title = "CustomerView";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+
+
+
+
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			<li id="shopping_cart">
+				<a href="/Home/AddToCart" title="Your Shopping Cart">Cart:
+					<span class="hidden">0</span>
+					<span class="hidden">product</span>
+					<span class="hidden">products</span>
+					<span class="">(empty)</span>
+				</a>
+			</li>
+    
+			
+    <li id="your_account">&nbsp;&nbsp;<a href="/Home/Index" title="Your Account">Logout</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+
+            <li id="subscribe">&nbsp;&nbsp;<a href="/Home/Subscribe" title="subcribe">Subsrcibe</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+    
+           
+		</ul>
+    }
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				
+                <li><a href="/Home/">Home</a></li>
+                <li><a href="/Home/ViewAll">ViewAll</a></li>
+                <li><a href="/Home/Gallery">Gallery</a></li>
+                <li><a href="/Home/About">About Us</a></li>
+                <li><a href="/Home/Contact">Contacts</a></li>
+			</ul>
+		</div>
+    }
+<div id="tmnivoslider"> 
+			<div id="slider">
+                
+				<img src="~/images/slide_02.jpg" alt="" title="#htmlcaption1" />
+			</div>	
+    </div>	
+<h2><b>Introduction</b></h2>
+<p>Online Jewellery Store is The best way to buy jewellery</p>
+<p></p>
+
+	

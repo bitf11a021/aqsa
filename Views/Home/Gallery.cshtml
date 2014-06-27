@@ -1,0 +1,86 @@
+@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+
+ 
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="~/Content/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+<script type="text/javascript" src="~/Scripts/jquery.fancybox.js?v=2.1.4"></script>
+
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			<li id="shopping_cart">
+				<a href="/Home/AddToCart" title="Your Shopping Cart">Cart:
+					<span class="hidden">0</span>
+					<span class="hidden">product</span>
+					<span class="hidden">products</span>
+					<span class="">(empty)</span>
+				</a>
+			</li>
+    
+			
+    <li id="your_account">&nbsp;&nbsp;<a href="/Home/Index" title="Your Account">Logout</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+
+            <li id="subscribe">&nbsp;&nbsp;<a href="/Home/Subscribe" title="subcribe">Subsrcibe</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+    
+           
+		</ul>
+    }
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				
+                <li><a href="/Home/">Home</a></li>
+                <li><a href="/Home/ViewAll">ViewAll</a></li>
+                <li><a href="/Home/Gallery">Gallery</a></li>
+                <li><a href="/Home/About">About Us</a></li>
+                <li><a href="/Home/Contact">Contacts</a></li>
+			</ul>
+		</div>
+    }
+@foreach(var x in ViewBag.X)
+{
+ 
+<a class="fancybox" href="~/Uploads/images/@x.imagee" alt="">
+      <img src="~/Uploads/images/@x.imagee" alt=""/></a>
+}
+
+     
+<script type='text/javascript'>
+$(document).ready(function() {
+	/* This is basic - uses default settings */
+	$("a#single_image").fancybox();
+	
+	/* Using custom settings */
+	$("a#inline").fancybox({
+		'hideOnContentClick': true
+	});
+
+	/* Apply fancybox to multiple items */
+	$("a.group").fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	false
+	});
+});
+</script> 
+<script>
+    // Activate fancyBox
+    $(".fancybox")
+        .attr('rel', 'gallery')
+        .fancybox({
+            padding: 0
+        });
+
+ </script>
+       <script>
+           // Launch fancyBox on first element
+           $(".fancybox").eq(0).trigger('click');
+    </script>
+
+   

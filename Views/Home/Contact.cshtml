@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+
+
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			<li id="shopping_cart">
+				<a href="/Home/AddToCart" title="Your Shopping Cart">Cart:
+					<span class="hidden">0</span>
+					<span class="hidden">product</span>
+					<span class="hidden">products</span>
+					<span class="">(empty)</span>
+				</a>
+			</li>
+    
+			
+    <li id="your_account">&nbsp;&nbsp;<a href="/Home/Index" title="Your Account">Logout</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+
+            <li id="subscribe">&nbsp;&nbsp;<a href="/Home/Subscribe" title="subcribe">Subsrcibe</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+    
+           
+		</ul>
+    }
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				
+                <li><a href="/Home/">Home</a></li>
+                <li><a href="/Home/ViewAll">ViewAll</a></li>
+                <li><a href="/Home/Gallery">Gallery</a></li>
+                <li><a href="/Home/About">About Us</a></li>
+                <li><a href="/Home/Contact">Contacts</a></li>
+			</ul>
+		</div>
+    }
+<div id="tmnivoslider"> 
+			<div id="slider">
+                
+				<img src="~/images/slide_02.jpg" alt="" title="#htmlcaption1" />
+			</div>	
+    </div>
+<!--Contact us page-->
+<p style="color:orange;font-family:Calibri;margin-left: 50px;font-size:40px">Contact Us </p>
+    <br />
+
+    <p  style="font-size:15px">Contact Us and give your feedback about our services</p>
+<pre style="font-family: Verdana;font-size: 16px">
+
+    Email Address : contact@OnlineJewelleryStore.com
+    Phone         :  0900-78601
+    Fax           : 111-222-3334
+</pre>
+ <div id="contents" style="float: left;width: 79%; height:500px;">
+                
+
+ 
+<div>
+
+
+  <form id="rgstrn" action="" method="post" style="height: auto;width:600px;border: 1px solid #BBBBBB;margin-left: 10px;margin-top: 30px">         
+        <table border="0" style="width:auto" style="margin-top: 50px;">
+            <tr style="height: 50px">
+                <td style="text-align: left;font-family:Calibri;font-size: 19px">Name</td>
+                <td><input type="text" name="name" style="height: 30px;width: 250px"/></td>
+                <td style="width: auto"><span style="font-family: Calibri; color: #218416; text-align: left"> <span class="field-validation-valid" data-valmsg-for="uname" data-valmsg-replace="true"></span></span> </td>
+            </tr><br /><br />
+            <tr style="height: 50px">
+                <td style="text-align: left;font-family:Calibri;font-size: 19px">Email ID</td>
+                <td><input type="text" name="email" style="height: 30px;width: 250px"/></td>
+                <td style="width: auto"><span style="font-family: Calibri; color: #218416; text-align: left"> <span class="field-validation-valid" data-valmsg-for="uname" data-valmsg-replace="true"></span></span> </td>
+            </tr>
+            <br /><br />
+            <tr style="height: 50px">
+                <td style="text-align: left;font-family:Calibri;font-size: 19px">FeedBack</td>
+                <td><input type="text" name="textBox" style="height: 100px;width: 350px;margin-left: 0px"/></td>
+                <td><span style="font-family: Calibri; color: #218416; text-align: left"><span class="field-validation-valid" data-valmsg-for="pass" data-valmsg-replace="true"></span></span> </td>
+
+                </tr>
+            <td></td>
+            <tr></tr><br /><br />
+   <tr style="height: 30px">
+                <td colspan="3"><<button style="color:blue; margin-left:10px""><input type="submit" value="Send" style="height: 30px;color:black;width: 100px;margin-left: 10px;font-size: 20px"/></button>
+              </td>
+        </tr> 
+            </table>
+</form>
+    
+</div>
+           
+<br />
+<br />
+
+
+

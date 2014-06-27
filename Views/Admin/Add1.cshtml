@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Add1";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			
+			<li id="user_info">	Welcome(&nbsp; <a class="login" href="/Account/Login">Log Out</a>&nbsp;)</li>
+    </ul>    }
+
+
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				 
+			<ul class="sf-menu clearfix">
+                <li><a href="/Admin/">Home</a>
+				</li>
+                <li><a href="/Admin/ViewAll">View All</a>
+				</li>
+				<li><a href="/Admin/Add">Add Product</a>
+				</li>
+                <li><a href="/Admin/Delete_Prod">Delete Product</a>
+				</li>
+                <li><a href="/Admin/Update_Prod">Update Product</a>
+				</li>
+                <li><a href="/Admin/Gallery">Gallery</a></li>
+                
+
+			</ul>
+			</ul>
+		</div>
+    }
+
+<div>
+     <h2 style="margin-left: 30px;font-family: Calibri;color: black;font-size : 30px">Add Product:</h2>
+
+
+@using (Html.BeginForm("Add1", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label style="text-align: right;font-family:Calibri;font-size: 19px">Enter Product Name</label>
+    <input type="text" name="name" id="name" style="height: 30px;width: 250px;margin-left: 20px"> <br />
+    <label style="text-align: right;font-family:Calibri;font-size: 19px">Enter Product Price</label>
+     <input type="text" id="p" name="p" style="height: 30px;width: 250px;margin-left: 20px"/><br />
+    <label style="text-align: right;font-family:Calibri;font-size: 19px">Enter Product Quantity</label>
+    <input type="text" name="q" id="q" style="height: 30px;width: 250px;margin-left: 20px"/><br />
+    <label style="text-align: right;font-family:Calibri;font-size: 19px">Select Category :</label>
+     <select id="category" name="c" style="height: 30px;width: 250px;margin-left: 20px"/>
+              <option  value="ring">Ring</option>
+              <option  value="neck">Necklaces</option>
+              <option  value="brac">Bracelets</option>
+            <br />
+  <label style="text-align: right;font-family:Calibri;font-size: 19px">Upload Photo :</label>
+   
+         
+    <br /> <input type="file" name="file" style="height: 30px;width: 250px;margin-left: 20px" /><br />
+   <button> <input type="submit" value="Submit!" style="text-align: right;font-family:Calibri;font-size: 19px" /></button>
+
+}
+
+      
+</div>
+           
+<br />

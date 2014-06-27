@@ -1,0 +1,75 @@
+﻿@model Online_Jewellery_Storee.Models.product1
+@{
+    ViewBag.Title = "Add_Product";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+
+
+@using (Html.BeginForm("Add","Admin",FormMethod.Post)) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Product Deatils</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+       
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Category)
+        </div>
+       
+          <div>
+           <select value="category">
+               <option value="ring">Ring</option>
+               <option value="braceletes">Braceletes</option>
+               <option value="necklaces">necklaces</option>
+           </select>
+            @Html.ValidationMessageFor(model => model.Category)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Qunatity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Qunatity)
+            @Html.ValidationMessageFor(model => model.Qunatity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Amount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Amount)
+            @Html.ValidationMessageFor(model => model.Amount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.imagee)
+        </div>
+        <div>
+            <input type="file" name="file" />
+             @*@Html.TextBoxFor(model => model.imagee, new { type = "file" })*@
+        </div>
+       
+
+       
+        <p>
+         <button>   <input type="submit" value="Add Product" /></button>
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

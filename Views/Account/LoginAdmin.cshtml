@@ -1,0 +1,80 @@
+﻿@model Online_Jewellery_Storee.Models.Admin
+@{
+    ViewBag.Title = "LoginAdmin";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+@section main
+{
+<ul id="header_user">
+			
+					<li id="shopping_cart">
+				<a href="/Home/AddToCart" title="Your Shopping Cart">Cart:
+					<span class="hidden">0</span>
+					<span class="hidden">product</span>
+					<span class="hidden">products</span>
+					<span class="">(empty)</span>
+				</a>
+			</li>
+			<li id="your_account">&nbsp;&nbsp;<a href="/Account/Signup" title="Your Account">Registration</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+	<li id="account1">&nbsp;&nbsp;<a href="/Account/subscribe" title="Your Account">Subscribe</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+			
+    </ul>
+ }
+
+
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				
+                <li><a href="/Home/">Home</a></li>
+                <li><a href="/Home/ViewAll">ViewAll</a></li>
+                <li><a href="/Home/Gallery">Gallery</a></li>
+                <li><a href="/Home/About">About Us</a></li>
+                <li><a href="/Home/Contact">Contacts</a></li>
+			</ul>
+		</div>
+    }
+<div id="tmnivoslider"> 
+			<div id="slider">
+                
+				<img src="~/images/slide_02.jpg" alt="" title="#htmlcaption1" />
+			</div>	
+    </div>
+
+ <div id="contents" style="float: right;width: 79%; height:500px">
+                
+
+ 
+<div>
+     <h2 style="margin-left: 30px;font-family: Calibri;color: black;font-size : 30px">Login Info</h2>
+    <br /><br />
+    @using(Html.BeginForm("LoginAdmin", "Account", FormMethod.Post))
+    {
+      
+          <fieldset>
+             <legend></legend>
+              <div class="editor-label" >
+              @Html.LabelFor(model=>model.Name)
+                  </div>
+              <div class="editor-field">
+                  @Html.EditorFor(model=>model.Name)
+                  
+                  </div>
+
+              <div class="editor-label" >
+              @Html.LabelFor(model=>model.Password)
+                  </div>
+              <div class="editor-field" id="pass"style="margin-left:20px; width:30px; height:20px">
+                 
+                  @Html.PasswordFor(model=>model.Password)
+                  </div>
+               <p>
+            <button><input type="submit" value="Login"  /></button>
+        </p>
+    </fieldset>
+    }
+     </div>
+           
+<br />
+<br />

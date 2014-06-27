@@ -1,0 +1,123 @@
+﻿@model Online_Jewellery_Storee.Models.Customer
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+
+<script>
+    $(function () {
+        $("#calendar").datepicker();
+    });
+</script>
+
+<ul id="header_user">
+			
+					<li id="shopping_cart">
+				<a href="/Home/AddToCart" title="Your Shopping Cart">Cart:
+					<span class="hidden">0</span>
+					<span class="hidden">product</span>
+					<span class="hidden">products</span>
+					<span class="">(empty)</span>
+				</a>
+			</li>
+			<li id="your_account">&nbsp;&nbsp;<a href="/Account/Signup" title="Your Account">Login</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+	<li id="account1">&nbsp;&nbsp;<a href="/Account/Signup" title="Your Account">Subscribe</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+			
+    </ul>
+    }
+
+
+
+
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				
+                <li><a href="/Home/">Home</a></li>
+                <li><a href="/Home/ViewAll">ViewAll</a></li>
+                <li><a href="/Home/Gallery">Gallery</a></li>
+                <li><a href="/Home/About">About Us</a></li>
+                <li><a href="/Home/Contact">Contacts</a></li>
+			</ul>
+		</div>
+    }
+<div id="tmnivoslider"> 
+			<div id="slider">
+                
+				<img src="~/images/slide_02.jpg" alt="" title="#htmlcaption1" />
+			</div>	
+    </div>
+
+@using (Html.BeginForm("SignUpView","Account",FormMethod.Post)) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>SignUp</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+       
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DOB)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DOB)
+            @Html.ValidationMessageFor(model => model.DOB)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Age)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Age)
+            @Html.ValidationMessageFor(model => model.Age)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gender)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Gender)
+            @Html.ValidationMessageFor(model => model.Gender)
+        </div>
+        <p>
+         <button><input type="submit" value="SignUP" /></button>
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+     
+              
+<br />
+<br />

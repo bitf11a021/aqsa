@@ -1,0 +1,72 @@
+﻿@model Online_Jewellery_Storee.Models.product1
+
+@{
+    ViewBag.Title = "Delete_Prod";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+
+
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			
+			<li id="user_info">	Welcome(&nbsp; <a class="login" href="/Account/Login">Log Out</a>&nbsp;)</li>
+    </ul>    }
+
+
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				 
+			<ul class="sf-menu clearfix">
+                <li><a href="/Admin/">Home</a>
+				</li>
+                <li><a href="/Admin/ViewAll">View All</a>
+				</li>
+				<li><a href="/Admin/Add">Add Product</a>
+				</li>
+                <li><a href="/Admin/Delete_Prod">Delete Product</a>
+				</li>
+                <li><a href="/Admin/Update_Prod">Update Product</a>
+				</li>
+                <li><a href="/Admin/Gallery">Gallery</a></li>
+                
+
+			</ul>
+			</ul>
+		</div>
+
+			
+    }
+<table>
+@foreach(var x in ViewBag.X)
+{ 
+    <tr>  <td>    <img src="~/Uploads/images/@x.imagee" alt="" width="40%" height="40%"/></td>
+                   <td>
+                <table style="margin-right:400px">
+       
+              <tr> <td> <p>ID :</p></td>&nbsp <td><p>@x.PId</p></td></tr> 
+
+                <tr><td><p> Name :</p></td>&nbsp<td><p>@x.Name</p></td></tr>
+               <tr><td><p>  Price :</p></td>&nbsp<td><p>@x.Amount</p></td>  </tr>
+               <tr><td><p>  Quantity:</p></td>&nbsp<td><p>@x.Qunatity</p></td>
+                   
+                    <td> <form method="get" action="/Admin/Delete/@x.PId"><button style=" margin-left:80px";width:"200px";height:"40px"; ><input type="submit" value="Delete Product"/></button></td> &nbsp&nbsp&nbsp&nbsp
+                 &nbsp<td>
+                    
+               </tr>
+            
+        
+   </table>
+         </td>
+
+    </tr>
+  
+      
+}
+    </table>
+         
+    
+
+   
