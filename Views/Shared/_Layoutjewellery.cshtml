@@ -46,13 +46,8 @@
 	<header id="header">
 		<a id="header_logo" href="index.html" title="Pets Store"><img class="logo" src="~/images/logo.jpg" alt="Pets Store" /></a>
 		<div id="search_block_top">
-			<form method="get" action="" id="searchbox">
-				<label for="search_query_top">Search</label>
-				<input type="hidden" name="controller" value="search" />
-				<input type="hidden" name="orderby" value="position" />
-				<input type="hidden" name="orderway" value="desc" />
-				<input class="search_query" type="text" id="search_query_top" name="search_query" value="Search" onFocus="if(this.value=='Search')this.value='';" onBlur="if(this.value=='')this.value='Search';" />
-				<a href="">Search</a>
+            <form action="/Admin/Seacrh_Product" method="get">
+         <button>   <input type="submit" value="search" /></button>
 			</form>
 		</div>
         @RenderSection("main",required:false)

@@ -3,11 +3,7 @@
     Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
 }
 
-@model Online_Jewellery_Storee.Models.Admin
-@{
-    ViewBag.Title = "LoginAdmin";
-    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
-}
+
 
 @section main
 {		<!-- MODULE Home Featured Products -->
@@ -94,16 +90,16 @@
 @using (Html.BeginForm("Add1", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <label style="text-align: right;font-family:Calibri;font-size: 19px">Enter Product Name</label>
-    <input type="text" name="Name" id="uname" style="height: 30px;width: 250px;margin-left: 30px"> <br />
+    <input type="text" name="Name" id="uname" style="height:30px;background-color:white;width: 250px;margin-left: 30px"> <br />
     <br />
     <label style="text-align: right;font-family:Calibri;font-size: 19px">Enter Product Price</label>
-     <input type="text" id="Amount" name="Amount" style="height: 30px;width: 250px;margin-left: 40px"/><br />
+     <input type="text" id="Amount" name="Amount" style="height: 30px;;background-color:white;width: 250px;margin-left: 40px"/><br />
     <br />
     <label style="text-align: right;font-family:Calibri;font-size: 19px">Enter Product Quantity</label>
-    <input type="text" name="Qunatity" id="quan" style="height: 30px;width: 250px;margin-left: 15px"/><br />
+    <input type="text" name="Qunatity" id="quan" style="height: 30px;;background-color:white;width: 250px;margin-left: 15px"/><br />
     <br />
     <label style="text-align: right;font-family:Calibri;font-size: 19px">Select Category :</label>
-     <select id="category" name="Category" style="height: 30px;width: 250px;margin-left: 60px">
+     <select id="category" name="Category" style="height: 30px;;background-color:white;width: 250px;margin-left: 60px">
               <option  value="ring">Ring</option>s
               <option  value="neck">Necklaces</option>
               <option  value="brac">Bracelets</option>
@@ -111,7 +107,7 @@
             <br />
              <br />
          
-      <input type="file" name="file" style="height: 30px;width: 250px;margin-left: 100px" /><br />
+      <input type="file" name="file" style="height: 30px;;background-color:white;width: 250px;margin-left: 100px" /><br />
    <button style="font-size:20px;text-align:center"> <input type="submit" value="Add Product" style="text-align: center;font-family:Calibri" /></button>
 
 }

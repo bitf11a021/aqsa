@@ -1,6 +1,6 @@
 ﻿@model Online_Jewellery_Storee.Models.product1
 @{
-    ViewBag.Title = "Update";
+    ViewBag.Title = "Update_";
     Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
 }
 
@@ -9,7 +9,10 @@
 <ul id="header_user">
 			
 			<li id="user_info">	Welcome(&nbsp; <a class="login" href="/Account/Login">Log Out</a>&nbsp;)</li>
-    </ul>    }
+    </ul>    
+    
+
+}
 
 
 @section menu
@@ -34,10 +37,10 @@
 			</ul>
 			</ul>
 		</div>
+}
 
-			
-    }
-<form action="/Admin/Update1" method="post">
+
+<form action="/Admin/Update_Product" method="post">
 <div id="content" class="float_r">
         	
             
@@ -45,20 +48,20 @@
 		<img src="~/Uploads/images/@ViewBag.X.imagee" alt="" width="20%" height="20%"/><br />
                 <br />
              	 Product ID :  
-                  <input type="text"  name="id" value="@ViewBag.X.PId" style="width:300px;" readonly="true"  />
+                  <input type="text"  name="id" value="@ViewBag.X.PId" style="width:300px;height:30px;background-color:white"" readonly="true"  />
                 <br />
                 <br />
                 Product Name :  
-                  <input type="text"  name="productname" value="@ViewBag.X.Name" style="width:300px;"  />
+                  <input type="text"  name="Name" value="@ViewBag.X.Name" style="width:300px;height:30px;background-color:white""  />
                 <br />
                 <br />
               Product price:
-                <input type="text"  name="price" value="@ViewBag.X.Amount" style="width:300px;"  />
+                <input type="text"  name="Amount" value="@ViewBag.X.Amount" style="width:300px;height:30px;background-color:white"  />
                 <br />
                 <br />
 
-                Product Qyantity:
-                <input type="text"  name="quantity" value="@ViewBag.X.Qunatity" style="width:300px;"  />
+                Product Quantity:
+                <input type="text"  name="Qunatity" value="@ViewBag.X.Qunatity" style="width:300px;height:30px;background-color:white""  />
                 <br />
                 <br />
               
@@ -67,4 +70,5 @@
                  
 
             </div>
+    </div>
        </form>

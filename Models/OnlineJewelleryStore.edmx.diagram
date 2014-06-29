@@ -5,10 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="559d58a0519440ef943a0283425f18d4" Name="Diagram1">
-        <EntityTypeShape EntityType="JewelleryStoreModel.Admin" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JewelleryStoreModel.Admin" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="JewelleryStoreModel.Customer" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="JewelleryStoreModel.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="JewelleryStoreModel.product1" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JewelleryStoreModel.product1" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="JewelleryStoreModel.CId" ManuallyRouted="false" />
         <AssociationConnector Association="JewelleryStoreModel.PId" ManuallyRouted="false" />
       </Diagram>

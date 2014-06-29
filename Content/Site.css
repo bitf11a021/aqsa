@@ -16,7 +16,6 @@ fieldset {
     border: 1px solid #ddd;
     padding: 0 1.4em 1.4em 1.4em;
     margin: 0 0 1.5em 0;
-    color:white;
 }
 
 legend {
@@ -26,7 +25,6 @@ legend {
 
 textarea {
     min-height: 75px;
-    color:white;
 }
 
 .editor-label {
@@ -35,14 +33,13 @@ textarea {
 
 .editor-field {
     margin: 0.5em 0 0 0;
-    color:white;
 }
 
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
 .field-validation-error {
-    color: red;
+    color: #f00;
 }
 
 .field-validation-valid {

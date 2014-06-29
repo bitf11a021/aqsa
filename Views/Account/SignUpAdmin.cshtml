@@ -1,8 +1,10 @@
-﻿@model Online_Jewellery_Storee.Models.Customer
+﻿@model Online_Jewellery_Storee.Models.Admin
 @{
-    ViewBag.Title = "SignUp";
+    ViewBag.Title = "SignUpAdmin";
     Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
 }
+
+<h2>SignUpAdmin</h2>
 
 <script>
     $(function () {
@@ -49,7 +51,7 @@
 			</div>	
     </div>
 
-@using (Html.BeginForm("SignUpView","Account",FormMethod.Post)) {
+@using (Html.BeginForm("SignUpAdminView","Account",FormMethod.Post)) {
     @Html.ValidationSummary(true)
 
     <fieldset>
@@ -58,14 +60,14 @@
         <div class="editor-label">
             @Html.LabelFor(model => model.Name)
         </div>
-        <div class="editor-field " style="height:30px;background-color:white">
+        <div class="editor-field" style="height:30px;background-color:white">
             @Html.EditorFor(model => model.Name)
             @Html.ValidationMessageFor(model => model.Name)
         </div>
 
        
 
-        <div class="editor-label">
+        <div class="editor-label" >
             @Html.LabelFor(model => model.Email)
         </div>
         <div class="editor-field" style="height:30px;background-color:white">

@@ -1,0 +1,91 @@
+﻿@model List<Online_Jewellery_Storee.Models.product1>
+@{
+    ViewBag.Title = "viewallproducts";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			<li id="shopping_cart">
+				<a href="/Cart/vieworder
+                    " title="Your Shopping Cart">Cart:
+					<span class="hidden">0</span>
+					<span class="hidden">product</span>
+					<span class="hidden">products</span>
+					<span class=""></span>
+				</a>
+			</li>
+    
+			
+    <li id="your_account">&nbsp;&nbsp;<a href="/Home/Index" title="Your Account">Logout</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+
+            <li id="subscribe">&nbsp;&nbsp;<a href="/Home/Subscribe" title="subcribe">Subsrcibe</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+    
+           
+		</ul>
+    }
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				
+                <li><a href="/Home/">Home</a></li>
+                <li><a href="/Home/viewallproducts">ViewAll</a></li>
+                <li><a href="/Home/Gallery">Gallery</a></li>
+                <li><a href="/Home/About">About Us</a></li>
+                <li><a href="/Home/Contact">Contacts</a></li>
+			</ul>
+		</div>
+    }
+
+ @if(Model!=null)
+{
+ foreach(var x in Model)
+ {
+			<div class="body">
+				<div id="content">
+
+					<div>
+						<ul>
+							<li>
+                                
+								<img src="~/Uploads/images/@x.imagee" alt="Image" height="150" width="150" />
+                               
+                                    
+								    <div class="extra-wrap" >
+                                            	<h3>@x.Name</h3>
+                                                <p class="p1">Category: @x.Category</p>
+                                                <p class="p1">Price:  @x.Amount</p>
+                                         <div style="color:#0000FF" id="result"></div>
+                                        @using (Html.BeginForm("CheckCart", "Cart", FormMethod.Post))
+                                                    {
+                                                        @Html.Hidden("id", @x.PId);
+
+                                                          @Html.Hidden("Amount", @x.Amount); 
+                                                     <h4> Enter Your Quantity</h4>
+                                               <input type=text name="Quantity" id="q1" /><br>
+                                                    
+                                          <button>  <input type="submit" value="Add to cart" /></button>
+                                                
+                                                    }
+                                              
+                                            </div>
+                                			</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+                                }
+                                }
+
+                    
+
+          
+        @using (Html.BeginForm("vieworder", "Cart", FormMethod.Post))
+           {
+                <input type="submit" value="Show Order" />
+           
+                 }
+
+				

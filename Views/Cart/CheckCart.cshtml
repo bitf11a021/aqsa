@@ -1,0 +1,69 @@
+﻿@model List<Online_Jewellery_Storee.Models.Order>
+@{
+    ViewBag.Title = "CheckCart";
+    Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
+}
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			<li id="shopping_cart">
+				<a href="/Cart/vieworder" title="Your Shopping Cart">Cart:
+					<span class="hidden">0</span>
+					<span class="hidden">product</span>
+					<span class="hidden">products</span>
+					<span class=""></span>
+				</a>
+			</li>
+    
+			
+    <li id="your_account">&nbsp;&nbsp;<a href="/Home/Index" title="Your Account">Logout</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+
+            <li id="subscribe">&nbsp;&nbsp;<a href="/Cart/viewallproducts" title="subcribe">Continue Shopping</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+    
+           <li id="sub">&nbsp;&nbsp;<a href="/Cart/checkout" title="subcribe">Check Out</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+    
+		</ul>
+    }
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				
+                <li><a href="/Home/">Home</a></li>
+                <li><a href="/Home/viewallproducts">ViewAll</a></li>
+                <li><a href="/Home/Gallery">Gallery</a></li>
+                <li><a href="/Home/About">About Us</a></li>
+                <li><a href="/Home/Contact">Contacts</a></li>
+			</ul>
+		</div>
+    }
+@if(Model!=null)
+{
+foreach (var x in Model)
+{
+    
+
+               <table style="margin-right:400px">
+       
+              <tr> <td> <p>ID :</p></td>&nbsp <td><p>@x.PId</p></td></tr> 
+               <tr><td><p>  Price :</p></td>&nbsp<td><p>@x.Amount</p></td>  </tr>
+               <tr><td><p>  Quantity:</p></td>&nbsp<td><p>@x.Quantity</p></td>
+                   @using (Html.BeginForm("DeleteItem", "Cart",FormMethod.Post))
+                                                    {
+                                                       <button type="submit" value="Remove">Remove</button>
+                                                    }
+                   
+                   
+               </tr></table>
+                                               @*   
+                                            	<h3>Product ID:@x.PId</h3>
+                                                <p class="p1">Quantity: @x.Quantity &nbsp  
+                                                    @using (Html.BeginForm("DeleteItem", "Cart",FormMethod.Post))
+                                                    {
+                                                       <button type="submit" value="Remove">Remove</button>
+                                                    }</p>
+                                                <p class="p1">Price: Rs: @x.Amount</p>
+                                                *@
+
+                    }
+  }

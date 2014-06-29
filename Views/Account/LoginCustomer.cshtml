@@ -37,15 +37,7 @@
 			</ul>
 		</div>
     }
-<div id="tmnivoslider"> 
-			<div id="slider">
-                
-				<img src="~/images/slide_02.jpg" alt="" title="#htmlcaption1" />
-			</div>	
-    </div>
-
- <div id="contents" style="float: right;width: 79%; height:500px">
-                
+               
 
  
 <div>
@@ -59,7 +51,7 @@
               <div class="search_query" >
               @Html.LabelFor(model=>model.Name)
                   </div>
-              <div class="search_query" id="name" style="margin-left:20px; width:50px;height:40px">
+              <div class="search_query" id="name" style="height:30px;background-color:white">
                   @Html.EditorFor(model=>model.Name)
                   
                   </div>
@@ -67,7 +59,7 @@
               <div class="editor-label" >
               @Html.LabelFor(model=>model.Password)
                   </div>
-              <div class="editor-field" id="pass"style="margin-left:20px; width:30px; height:20px">
+              <div class="editor-field" id="pass"style=" height:30px;background-color:white">
                  
                   @Html.PasswordFor(model=>model.Password)
                   </div>

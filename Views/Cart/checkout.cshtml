@@ -1,7 +1,40 @@
-﻿@{
+﻿@model List<Online_Jewellery_Storee.Models.Order>
+@{
     ViewBag.Title = "checkout";
     Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
 }
+
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			<li id="shopping_cart">
+				<a href="/Cart/vieworder" title="Your Shopping Cart">Cart:
+					<span class="hidden">0</span>
+					<span class="hidden">product</span>
+					<span class="hidden">products</span>
+					<span class=""></span></a>
+			</li>
+    
+			
+    <li id="your_account">&nbsp;&nbsp;<a href="/Home/Index" title="Your Account">Logout</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+
+            <li id="subscribe">&nbsp;&nbsp;<a href="/Home/Subscribe" title="subcribe">Subsrcibe</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+    
+           
+		</ul>
+    }
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				 <li><a href="/Home/">Home</a></li>
+                <li><a href="/Cart/viewallproducts">ViewAll</a></li>
+                <li><a href="/Home/Gallery">Gallery</a></li>
+                <li><a href="/Home/About">About Us</a></li>
+                <li><a href="/Home/Contact">Contacts</a></li>
+			</ul>
+		</div>
+    }
 
         <div id="content" class="float_r">
         	<h2>Checkout</h2>
@@ -12,30 +45,33 @@
                 <br />
                 <br />
               Address:
-				<input type="text"  style="width:300px;"  />
+				<input type="text"  style="width:300px;background-color:white"  />
                 <br />
                 <br />
               City:
-                <input type="text"  style="width:300px;"  />
+                <input type="text"  style="width:300px;background-color:white"  />
                 <br />
                 <br />
                 Country:
-                <input type="text"  style="width:300px;"  />
+                <input type="text"  style="width:300px;background-color:white"  />
             </div>
             
             <div class="content_half float_r checkout">
             	E-MAIL
-				<input type="text"  style="width:300px;"  />
+				<input type="text"  style="width:300px;background-color:white" />
                 <br />
                 <br />
           PHONE<br />
 				<span style="font-size:10px">Please, specify your reachable phone number. YOU MAY BE GIVEN A CALL TO VERIFY AND COMPLETE THE ORDER.</span>
-                <input type="text"  style="width:300px;"  />
+                <input type="text"  style="width:300px;;background-color:white"  />
             </div>
-            
+            @if (Model!=null)
+            {
+              foreach(var x in Model)
+              {  
             <div class="cleaner h50"></div>
             <h3>SHOPPING CART</h3>
-            <h4>TOTAL AMOUNT: <strong>$100</strong></h4>
+            <h4>TOTAL AMOUNT: <strong>@x.Amount</strong></h4>
 			<p><input type="checkbox" />
 			I accept the <a href="#">terms of use</a> of this website.</p>
             <table style="border:1px solid #CCCCCC;" width="100%">
@@ -52,6 +88,9 @@
                     <td><a href="www.2Checkout.com" class="more">2CHECKOUT</a></td>
                 </tr>
             </table>
-        </div> 
+      
+            
+            
         <div class="cleaner"></div>
-
+            }
+            }

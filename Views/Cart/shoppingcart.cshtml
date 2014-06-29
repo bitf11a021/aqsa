@@ -3,7 +3,39 @@
     Layout = "~/Views/Shared/_Layoutjewellery.cshtml";
 }
 
+ 
+@section main
+{		<!-- MODULE Home Featured Products -->
+<ul id="header_user">
+			<li id="shopping_cart">
+					<a href="/Cart/vieworder" title="Your Shopping Cart">Cart:
+					<span class="hidden">0</span>
+					<span class="hidden">product</span>
+					<span class="hidden">products</span>
+					<span class=""></span>
+				</a>
+			</li>
     
+			
+    <li id="your_account">&nbsp;&nbsp;<a href="/Home/Index" title="Your Account">Logout</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+
+            <li id="subscribe">&nbsp;&nbsp;<a href="/Home/Subscribe" title="subcribe">Subsrcibe</a>&nbsp;&nbsp;</li><!-- /Block user information module HEADER -->
+    
+           
+		</ul>
+    }
+@section menu
+{
+ <div id="topmenu">
+			<ul class="sf-menu clearfix">
+				 <li><a href="/Home/">Home</a></li>
+                <li><a href="/Cart/viewallproducts">ViewAll</a></li>
+                <li><a href="/Home/Gallery">Gallery</a></li>
+                <li><a href="/Home/About">About Us</a></li>
+                <li><a href="/Home/Contact">Contacts</a></li>
+			</ul>
+		</div>
+    }   
 <div id="content" class="float_r">
         	<h1>Shopping Cart</h1>
         	<table width="680px" cellspacing="0" cellpadding="5">
